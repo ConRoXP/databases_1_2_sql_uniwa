@@ -213,7 +213,7 @@ MariaDB [personnel]> describe dept;
 +-----------+--------------+------+-----+---------+-------+
 
 --Ερώτημα 13:
- alter table dept
+alter table dept
 drop primary key;
 
 MariaDB [personnel]> describe dept;
@@ -281,18 +281,6 @@ MariaDB [personnel]> describe emp;
 alter table emp
 drop foreign key fk_EMP_DEPT;
 
-MariaDB [personnel]> describe emp;
-+----------+---------------+------+-----+---------+-------+
-| Field    | Type          | Null | Key | Default | Extra |
-+----------+---------------+------+-----+---------+-------+
-| empno    | decimal(4,0)  | NO   | PRI | NULL    |       |
-| name     | varchar(24)   | YES  |     | NULL    |       |
-| jobno    | decimal(3,0)  | YES  | MUL | NULL    |       |
-| deptno   | decimal(2,0)  | YES  | MUL | NULL    |       |
-| comm     | decimal(10,2) | YES  |     | NULL    |       |
-| hiredate | date          | YES  |     | NULL    |       |
-+----------+---------------+------+-----+---------+-------+
-
 MariaDB [personnel]> show create table emp;
 +-------+---------------------------------------------------------------------+
 | Table | Create Table
@@ -311,21 +299,8 @@ MariaDB [personnel]> show create table emp;
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci |
 +-------+-------------------------------------------------------------------------------+
 
-
 alter table emp
 drop foreign key fk_EMP_JOB;
-
-MariaDB [personnel]> describe emp;
-+----------+---------------+------+-----+---------+-------+
-| Field    | Type          | Null | Key | Default | Extra |
-+----------+---------------+------+-----+---------+-------+
-| empno    | decimal(4,0)  | NO   | PRI | NULL    |       |
-| name     | varchar(24)   | YES  |     | NULL    |       |
-| jobno    | decimal(3,0)  | YES  | MUL | NULL    |       |
-| deptno   | decimal(2,0)  | YES  | MUL | NULL    |       |
-| comm     | decimal(10,2) | YES  |     | NULL    |       |
-| hiredate | date          | YES  |     | NULL    |       |
-+----------+---------------+------+-----+---------+-------+
 
 MariaDB [personnel]> show create table emp;
 +-------+-----------------------------------------------------------------+
@@ -388,7 +363,7 @@ MariaDB [personnel]> select * from information_schema.table_constraints where co
 +--------------------+-------------------+-----------------+--------------+------------+-----------------+
 
 --Ερώτημα 18:
- create table project(
+create table project(
 p_id int not null auto_increment,
 p_name varchar(255),
 primary key (p_id));
