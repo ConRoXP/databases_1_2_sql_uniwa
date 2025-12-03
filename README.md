@@ -25,4 +25,4 @@ The lab covers an introduction to the SQL language using the XAAMP/MySQL environ
 • Distributed databases  
 
 **Lab**:
-The lab expands on the usage of SQL from the previous course again with 3 assignments.
+The lab expands on the usage of SQL from the previous course with 5 assignments.
